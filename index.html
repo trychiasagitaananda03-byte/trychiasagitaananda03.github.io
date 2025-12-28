@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MY Profile</title>
+    <title>MY Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet" />
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
-    <!-- <img src="img/b.jpeg" alt="bg"> -->
     <nav>
       <div class="logo">
         <h2>Trychia Sagita</h2>
@@ -46,15 +45,10 @@
       </div>
       <div class="container-kanan">
         <p class="awal">"Hai, aku Trychia Sagita Ananda, seorang mahasiswi yang sedang belajar dan berkembang lewat berbagai pengalaman. Aku tertarik mencoba hal-hal baru dan menikmati proses belajar di setiap tahapnya."</p>
-        <!-- <p class="akhir">
-          Di luar kegiatan perkuliahan, aku juga pernah menulis novel bergenre slice of life dengan nuansa drama emosional yang mendalam, yang mengangkat kehidupan sehari-hari serta dinamika keluarga secara realistis dan dekat dengan
-          keseharian.
-        </p> -->
       </div>
     </div>
     <section id="Keterampilan">
       <h3>Keterampilan & Hobi</h3>
-
       <div class="container-dua">
         <div class="card">
           <span>Melukis</span>
@@ -103,28 +97,12 @@
     </div>
     <div class="table" id="contact">
       <h2 class="contact">Contact Me</h2>
-      <table>
-        <tr>
-          <td>Name</td>
-        </tr>
-      </table>
-      <table>
-        <tr>
-          <td>Email</td>
-        </tr>
-      </table>
-      <table>
-        <tr>
-          <td>Massege</td>
-        </tr>
-      </table>
-      <table class="submit">
-        <tr>
-          <td valign="battom">
-          <input type="submit" value="submit">
-          </td>
-        </tr>
-      </table>
+      <form name="contact-form">
+        <input type="text" name="nama" placeholder="name" required class="inputs" />
+        <input type="email" name="pesan" placeholder="email" required class="inputs" />
+        <textarea name="pesan" placeholder="message" required class="inputs"></textarea>
+        <button type="submit" class="btn-kirim">Submit</button>
+      </form>
     </div>
     <footer>
       <p>Created by <a href="https://www.instagram.com/sgta_annd/">Trychia Sagita</a></p>
