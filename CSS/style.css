@@ -1,0 +1,617 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Luckiest Guy", cursive;
+  background-image: url(../img/bg3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* navbar */
+nav {
+  display: flex;
+  background-color: #494646;
+  justify-content: space-around;
+  color: white;
+  height: 70px;
+  align-items: center;
+  box-shadow: 0px 1.5px 3px black;
+  border-radius: 40px;
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-left: 15px;
+  z-index: 9999;
+}
+nav .logo {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 5px;
+  font-size: 20px;
+  text-shadow: 0px 2px 1px black;
+  z-index: 2000;
+  animation: naik 1s ease-out;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-around;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  animation: img 1.2s ease forwards;
+}
+nav ul li a:hover {
+  color: rgb(100, 97, 97);
+}
+
+/* menu */
+.menu {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1000;
+}
+.menu input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+/* animation humberger menu */
+.menu span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu input:checked ~ span:nth-child(2) {
+  transform: rotate(42deg) translate(-3px, -1px);
+  background-color: white;
+}
+.menu input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-2px, 0);
+  background-color: white;
+}
+.menu input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* profile foto */
+.container {
+  width: 300px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+.container img {
+  width: 300px;
+  height: 310px;
+  border-radius: 50%;
+  border: 3px solid rgb(241, 228, 204);
+  box-shadow: 1px 6px 8px black;
+  z-index: 2;
+  transition: all 0.5s;
+  margin-top: 70px;
+}
+.container img:hover {
+  transform: scale(1.1);
+}
+.nama {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  text-shadow: 0 2px 3px black;
+  color: white;
+  animation: img 0.8s ease forwards;
+}
+.mahasiswa {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  animation: img 0.8s ease forwards;
+}
+.container-utama {
+  width: 1000px;
+  height: 350px;
+  display: flex;
+  margin: auto;
+  margin-top: 100px;
+  background-color: #494646;
+  box-shadow: 0 2px 3px black;
+  overflow: hidden;
+}
+.container-utama img {
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-left: 15px;
+  box-shadow: 0px 1px 2px black;
+  border: 2px solid black;
+  opacity: 0;
+  animation: img 0.8s ease forwards;
+}
+.awal {
+  padding-top: 10px;
+  margin-left: 20px;
+  margin-top: 140px;
+  animation: fadein 2s ease;
+  font-size: 20px;
+}
+
+.container-utama h2 {
+  margin-bottom: 30px;
+  margin-left: 20px;
+  font-size: 35px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 2px white;
+  animation: naik 1s ease-out;
+}
+h3 {
+  text-align: center;
+  margin-top: 130px;
+  font-size: 32px;
+  letter-spacing: 1.4px;
+  text-shadow: 0 2px 3px white;
+  animation: naik 1s ease-out;
+}
+.container-dua {
+  width: 800px;
+  margin: 80px auto;
+  display: flex;
+}
+.container-dua span {
+  display: block;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(200, 200, 200, 0.5);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  line-height: 250px;
+  font-size: 20px;
+  color: black;
+  text-shadow: 1px 1px 1px #ddd;
+  opacity: 0;
+  transform: scale(0) rotate(0);
+  transition: 0.8s;
+  margin-bottom: 135px;
+}
+.card:hover span {
+  opacity: 1;
+  transform: scale(1);
+}
+.card.besar:hover span {
+  opacity: 1;
+  transform: scale(1);
+  background-origin: 0;
+}
+span {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  box-shadow: 0px 1px 2px black;
+}
+.card {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-color: #494646;
+  overflow: hidden;
+  margin: 10px;
+  flex: 1;
+  position: relative;
+}
+.card.besar {
+  transform: scale(1.12);
+  position: relative;
+}
+.card .header {
+  height: 250px;
+  background-color: #666;
+}
+
+.card .content {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.header img {
+  height: 250px;
+  width: 100%;
+}
+.container-dua p {
+  padding-top: 15px;
+  letter-spacing: 0.6px;
+  margin: auto;
+}
+.clear {
+  clear: both;
+}
+.container-tiga {
+  width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #494646;
+  border-radius: 50px;
+  box-shadow: 0px 2px 3px black;
+}
+h4 {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin-top: 150px;
+  text-shadow: 0px 2px 3px white;
+}
+h5 {
+  font-size: 25px;
+  padding-left: 80px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-shadow: 0px 0.5px 1px white;
+}
+.skill {
+  padding: 25px;
+  box-sizing: border-box;
+}
+.skill img {
+  width: 220px;
+  height: 200px;
+  transition: all 0.6s;
+}
+.skill img:hover {
+  transform: scale(1.1);
+}
+.table {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 400px;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column;
+}
+table {
+  width: 400px;
+  height: 50px;
+  background-color: #494646;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+td {
+  padding-left: 20px;
+}
+.contact {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.submit {
+  width: 100px;
+  transition: all 0.4s;
+}
+input {
+  display: flex;
+  text-decoration: none;
+  background-color: #494646;
+  border: none;
+  text-align: center;
+  padding-right: 20px;
+  width: 100%;
+}
+.submit:hover {
+  transform: scale(1.2);
+}
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #4e4c4c;
+  margin-top: 70px;
+  font-size: 19px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  letter-spacing: 0.5px;
+}
+a {
+  color: black;
+}
+/* animation */
+@keyframes naik {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes img {
+  from {
+    opacity: 0;
+    transform: scale(0.6) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+  nav ul {
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 70vh;
+    position: absolute;
+    flex-direction: column;
+    background-color: #494646;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 900;
+    transform: translateY(-100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  .menu {
+    display: flex;
+  }
+  nav {
+    border-radius: 0%;
+    margin: 0;
+    width: 100%;
+  }
+
+  nav ul.slide {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .container img {
+    width: 60%;
+    height: 190px;
+    border-radius: 50%;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    margin-top: -80px;
+  }
+  .nama {
+    text-shadow: 0 0.5px 1px black;
+  }
+  .mahasiswa {
+    text-shadow: 0 0 0;
+  }
+  .container-utama {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    margin: auto;
+    margin-top: -60px;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0%;
+  }
+  .awal {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    font-size: 14px;
+  }
+  .container-utama img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0;
+  }
+  .container-dua {
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+  }
+  .container-dua img {
+    width: 100%;
+    height: 150px;
+  }
+  .card {
+    width: 45%;
+    margin: 0;
+  }
+  .card.besar {
+    width: 95%;
+  }
+  .card .header {
+    height: 100px;
+    font-size: 0.9em;
+  }
+  .card .content {
+    padding: 10px;
+    font-size: 0.85em;
+    margin-top: 42px;
+  }
+  .container-dua span {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    line-height: 150px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    box-shadow: 0px 1px 2px black;
+    box-sizing: border-box;
+  }
+  .container-tiga {
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 0;
+    padding: 10px;
+  }
+  .container-dua img {
+    width: 100%;
+    height: 150px;
+  }
+  h5 {
+    text-shadow: 0px 1px 2px white;
+    letter-spacing: 0.8px;
+  }
+  .table {
+    width: 80%;
+  }
+  table {
+    width: 80%;
+  }
+  footer {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  nav ul {
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 70vh;
+    position: absolute;
+    flex-direction: column;
+    background-color: #494646;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 900;
+    transform: translateY(-100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  nav ul.slide {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  nav {
+    width: 100%;
+    height: 70px;
+    border-radius: 0%;
+    margin: 0;
+  }
+  .menu {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+  .container-utama {
+    width: 100%;
+    height: 330px;
+  }
+  .awal {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 125px;
+    font-size: 19px;
+  }
+  .container-utama img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0;
+  }
+  .container-dua {
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .container-dua img {
+    width: 100%;
+    height: 210px;
+  }
+  .card .header {
+    height: 210px;
+  }
+  .card {
+    width: 45%;
+    margin: 0;
+  }
+  .card.besar {
+    width: 95%;
+  }
+  .card .content {
+    padding: 5px;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  }
+  .container-dua span {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    line-height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    box-shadow: 0px 1px 2px black;
+  }
+  .container-tiga {
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 0;
+  }
+  h5 {
+    text-shadow: 1px 1px 2px white;
+  }
+}
