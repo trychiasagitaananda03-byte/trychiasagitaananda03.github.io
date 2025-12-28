@@ -404,6 +404,7 @@ a {
     border-radius: 0%;
     margin: 0;
     width: 100%;
+    position: fixed;
   }
 
   nav ul.slide {
@@ -417,7 +418,6 @@ a {
     align-items: center;
     margin: auto;
     display: flex;
-    margin-top: -80px;
   }
   .nama {
     text-shadow: 0 0.5px 1px black;
@@ -441,7 +441,7 @@ a {
     height: auto;
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 60px;
     font-size: 14px;
   }
   .container-utama img {
@@ -473,8 +473,8 @@ a {
     font-size: 0.9em;
   }
   .card .content {
-    padding: 10px;
-    font-size: 0.85em;
+    padding: 6px;
+    font-size: 12px;
     margin-top: 42px;
   }
   .container-dua span {
